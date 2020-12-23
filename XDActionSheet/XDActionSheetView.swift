@@ -2,8 +2,8 @@
 //  XDActionSheetView.swift
 //  XDActionSheet
 //
-//  Created by chenyixing on 2017/6/2.
-//  Copyright © 2017年 chenyixing. All rights reserved.
+//  Created by xiaoda on 2017/6/2.
+//  Copyright © 2017年 xiaoda. All rights reserved.
 //
 
 import UIKit
@@ -79,7 +79,7 @@ extension XDActionSheetView{
             
             let btnW = bgWidth
             let btnH = CELL_HEIGHT - 0.5;
-            let btn = UIButton(type: UIButtonType.custom)
+            let btn = UIButton(type: UIButton.ButtonType.custom)
             
             btn.setTitle(titleArray?[i] as! String?, for: .normal)
             btn.backgroundColor=UIColor.white
@@ -90,7 +90,7 @@ extension XDActionSheetView{
             btn.addTarget(self, action:#selector(buttonAtion(_:)), for: .touchUpInside)
             self.btnBackView.addSubview(btn)
         }
-        let btn = UIButton(type: UIButtonType.custom)
+        let btn = UIButton(type: UIButton.ButtonType.custom)
         btn.setTitle("取消", for: .normal)
         btn.setTitleColor(UIColor.black, for: .normal)
         btn.backgroundColor = UIColor.white
@@ -112,7 +112,7 @@ extension XDActionSheetView{
 
 extension XDActionSheetView{
     
-    func buttonAtion(_ sender:UIButton){
+    @objc func buttonAtion(_ sender:UIButton){
         if (delegate != nil) {
             delegate?.actionSheetDidSelsctedButtonAtIndex(actionSheet:self, buttonIndex:sender.tag )
         }
@@ -120,7 +120,7 @@ extension XDActionSheetView{
     }
 }
 extension XDActionSheetView{
-    func hiddenSheet() -> Void {
+    @objc func hiddenSheet() -> Void {
         UIView.animate(withDuration: 0.3, animations: {
             var frame = self.btnBackView.frame;
             frame.origin.y = UIScreen.main.bounds.size.height;

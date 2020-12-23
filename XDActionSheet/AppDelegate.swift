@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  XDActionSheet
 //
-//  Created by chenyixing on 2017/6/2.
-//  Copyright © 2017年 chenyixing. All rights reserved.
+//  Created by xiaoda on 2017/6/2.
+//  Copyright © 2017年 xiaoda. All rights reserved.
 //
 
 import UIKit
@@ -13,10 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
